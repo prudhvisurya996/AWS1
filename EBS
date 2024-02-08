@@ -3,3 +3,22 @@ Steps
 Volume creation
 Formatting
 Mounting
+
+
+  90  lsblk
+   91  lsblk /dev/xvdf
+   92  lsblk /dev/xvda
+   93  lsblk /dev/xvdh
+   94  clear
+   95  mkfs xfs /dev/xvdf
+   96  mkfs.xfs /dev/xvdf
+   97  cd /mnt
+   98  ls
+   99  mkdir extravol
+  100  ls
+  101  cd
+  102  clear
+  103  mount /dev/xvdf /mnt/extravol
+  104  ls
+  105  lsblk
+  106  history
