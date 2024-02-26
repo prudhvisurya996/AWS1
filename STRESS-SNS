@@ -1,0 +1,20 @@
+apt install stress -y
+
+stress --cpu 10 --timeout 1h
+stress --cpu 10 --timeout 10m
+stress --cpu 10 --timeout 1d
+
+
+How to enable multiple emails subscriptions in SNS
+
+To set up multiple email accounts to receive notifications from Amazon CloudWatch, you can utilize Amazon Simple Notification Service (SNS) as an intermediary service. Here's how you can do it:
+
+1. **Create an SNS Topic**: Navigate to the AWS Management Console and go to the Amazon SNS service. Create a new topic or use an existing one. This topic will act as a central point for sending notifications.
+
+2. **Subscribe Email Addresses to the SNS Topic**: For each email address you want to receive notifications, subscribe them to the SNS topic created in the previous step. You can do this by selecting the topic, clicking on "Create subscription", and choosing the protocol as "Email". Enter the email address you want to subscribe and confirm the subscription through the confirmation email sent to that address.
+
+3. **Configure CloudWatch Alarms**: Now, go to the Amazon CloudWatch service in the AWS Management Console. Create or edit the alarms for which you want to receive notifications. When configuring the alarm actions, select "Send a notification to an Amazon SNS topic" and choose the SNS topic created earlier.
+
+4. **Test the Setup**: Trigger the alarm conditions in CloudWatch to test if notifications are being sent to the subscribed email addresses.
+
+By following these steps, you can set up multiple email accounts to receive notifications from Amazon CloudWatch. Each email address will need to be subscribed to the SNS topic, and CloudWatch alarms will be configured to send notifications to that topic.
